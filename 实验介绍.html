@@ -1,151 +1,77 @@
-
-<!DOCTYPE html>
-<html lang="zh-CN">
- 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-		<title>表格</title>
-		<meta name="keywords" content="表格">
-		<meta name="description" content="这真的是一个表格" />
-		<meta name="HandheldFriendly" content="True" />
-		<link rel="shortcut icon" href="img/favicon.ico">
-		<!-- Bootstrap3.3.5 CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
- 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-    		<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    	<![endif]-->
-	</head>
- 
-	<body>
-		<div class="panel-group">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					列表
-				</div>
-				<div class="panel-body">
-					<div class="list-op" id="list_op">
-						<button type="button" class="btn btn-default btn-sm">
-							<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
-						</button>
-						<button type="button" class="btn btn-default btn-sm">
-							<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
-						</button>
-						<button type="button" class="btn btn-default btn-sm">
-							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
-						</button>
-					</div>
-				</div>
-				<table class="table table-bordered table-hover">
-					<thead>
-						<tr class="success">
-							<th>类别编号</th>
-							<th>类别名称</th>
-							<th>类别组</th>
-							<th>状态</th>
-							<th>说明</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>C00001</td>
-							<td>机车</td>
-							<td>机车</td>
-							<td>有效</td>
-							<td>机车头</td>
-						</tr>
-						<tr>
-							<td>C00002</td>
-							<td>车厢</td>
-							<td>机车</td>
-							<td>有效</td>
-							<td>载客车厢</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="panel-footer">
-					<nav>
-						<ul class="pagination pagination-sm">
-    						<li class="disabled">
-      							<a href="#" aria-label="Previous">
-        							<span aria-hidden="true">«</span>
-      							</a>
-    						</li>
-    						<li class="active"><a href="#">1</a></li>
-						    <li><a href="#">2</a></li>
-						    <li><a href="#">3</a></li>
-						    <li><a href="#">4</a></li>
-						    <li><a href="#">5</a></li>
-    						<li>
-						    	<a href="#" aria-label="Next">
-						    		<span aria-hidden="true">»</span>
-						    	</a>
-    						</li>
-						</ul>
-					</nav>
-				</div><!-- end of panel-footer -->
-			</div><!-- end of panel -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>心理学实验</title>
+<link rel="stylesheet" href="../网站/css/reveal-it.css" type="text/css">
+<!-- 新 Bootstrap4 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="../网站/js/reveal-it.js"></script>	
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body{
+		position: relative;
+	}
+	.bc{
+		background: #1C1C1C
+	}
+	</style>
+</head>
+	
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bc">
+		<div class="container-fluid">
+           <a class="navbar-brand" href="#">心理学实验</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <!-- 这个 div 加上 justify-content-end 样式即可 -->
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+               <ul class="navbar-nav" id="headerNav">
+                   <li class="nav-item"><a class="nav-link" href="#1">实验介绍</a></li>
+                   <li class="nav-item"><a class="nav-link disabled">开始实验</a></li>
+                   <li class="nav-item"><a class="nav-link disabled">实验结果</a></li>
+               </ul>
+           </div>
 		</div>
-		<!-- jQuery1.11.3 (necessary for Bo otstrap's JavaScript plugins) -->
-		<script src="js/jquery-1.11.3.min.js "></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js "></script>
-		<script>
-		$(function(){
-			function initTableCheckbox() {
-				var $thr = $('table thead tr');
-				var $checkAllTh = $('<th><input type="checkbox" id="checkAll" name="checkAll" /></th>');
-				/*将全选/反选复选框添加到表头最前，即增加一列*/
-				$thr.prepend($checkAllTh);
-				/*“全选/反选”复选框*/
-				var $checkAll = $thr.find('input');
-				$checkAll.click(function(event){
-					/*将所有行的选中状态设成全选框的选中状态*/
-					$tbr.find('input').prop('checked',$(this).prop('checked'));
-					/*并调整所有选中行的CSS样式*/
-					if ($(this).prop('checked')) {
-						$tbr.find('input').parent().parent().addClass('warning');
-					} else{
-						$tbr.find('input').parent().parent().removeClass('warning');
-					}
-					/*阻止向上冒泡，以防再次触发点击操作*/
-					event.stopPropagation();
-				});
-				/*点击全选框所在单元格时也触发全选框的点击操作*/
-				$checkAllTh.click(function(){
-					$(this).find('input').click();
-				});
-				var $tbr = $('table tbody tr');
-				var $checkItemTd = $('<td><input type="checkbox" name="checkItem" /></td>');
-				/*每一行都在最前面插入一个选中复选框的单元格*/
-				$tbr.prepend($checkItemTd);
-				/*点击每一行的选中复选框时*/
-				$tbr.find('input').click(function(event){
-					/*调整选中行的CSS样式*/
-					$(this).parent().parent().toggleClass('warning');
-					/*如果已经被选中行的行数等于表格的数据行数，将全选框设为选中状态，否则设为未选中状态*/
-					$checkAll.prop('checked',$tbr.find('input:checked').length == $tbr.length ? true : false);
-					/*阻止向上冒泡，以防再次触发点击操作*/
-					event.stopPropagation();
-				});
-				/*点击每一行时也触发该行的选中操作*/
-				$tbr.click(function(){
-					$(this).find('input').click();
-				});
-			}
-			initTableCheckbox();
-		});
-		</script>
-	</body>
- 
+   </nav>
+<br/><br/><br/>
+<div id="1" class="container">
+  <div class="row">
+    <div class="col" style="text-align: center">
+      <h1><strong>实验介绍</strong></h1>
+    </div>
+	</div>
+	<br/><br/>
+	  <div class="row">
+		  <div class="col-sm-4" style="background: #A8D8B9">
+			  <div class="col-10 offset-1">
+			  <img class="img-fluid" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny44NjcgNDc3Ljg2NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3Ljg2NyA0NzcuODY3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDA5LjYsNTEuMmgtNjguMjY3aC0yMS44MjhsLTEzLjE5My0zOS41MjZDMzAzLjk5Miw0LjcwNywyOTcuNDc2LDAuMDA2LDI5MC4xMzMsMGgtMTAyLjQgICAgYy03LjM0MywwLjAwNi0xMy44NTksNC43MDctMTYuMTc5LDExLjY3NEwxNTguMzYyLDUxLjJINjguMjY3Yy05LjQyNiwwLTE3LjA2Nyw3LjY0MS0xNy4wNjcsMTcuMDY3VjQ2MC44ICAgIGMwLDkuNDI2LDcuNjQxLDE3LjA2NywxNy4wNjcsMTcuMDY3SDQwOS42YzkuNDI2LDAsMTcuMDY3LTcuNjQxLDE3LjA2Ny0xNy4wNjdWNjguMjY3QzQyNi42NjcsNTguODQxLDQxOS4wMjYsNTEuMiw0MDkuNiw1MS4yeiAgICAgTTE1My42LDg1LjMzM2gxNy4wNjdjNy4zNDMtMC4wMDYsMTMuODU5LTQuNzA3LDE2LjE3OS0xMS42NzRsMTMuMTkzLTM5LjUyNmg3Ny43OWwxMy4xOTMsMzkuNTI2ICAgIGMyLjMyLDYuOTY3LDguODM2LDExLjY2OCwxNi4xNzksMTEuNjc0aDE3LjA2N3YzNC4xMzNIMTUzLjZWODUuMzMzeiBNMzkyLjUzMyw0NDMuNzMzaC0zMDcuMnYtMzU4LjRoMzQuMTMzdjUxLjIgICAgYzAsOS40MjYsNy42NDEsMTcuMDY3LDE3LjA2NywxNy4wNjdoMjA0LjhjOS40MjYsMCwxNy4wNjctNy42NDEsMTcuMDY3LTE3LjA2N3YtNTEuMmgzNC4xMzNWNDQzLjczM3oiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMzguOTMzLDUxLjJjLTkuNDI2LDAtMTcuMDY3LDcuNjQxLTE3LjA2NywxNy4wNjd2MTcuMDY3YzAsOS40MjYsNy42NDEsMTcuMDY3LDE3LjA2NywxNy4wNjdTMjU2LDk0Ljc1OSwyNTYsODUuMzMzICAgIFY2OC4yNjdDMjU2LDU4Ljg0MSwyNDguMzU5LDUxLjIsMjM4LjkzMyw1MS4yeiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM0MS4zMzMsMjA0LjhoLTIwNC44Yy05LjQyNiwwLTE3LjA2Nyw3LjY0MS0xNy4wNjcsMTcuMDY3czcuNjQxLDE3LjA2NywxNy4wNjcsMTcuMDY3aDIwNC44ICAgIGM5LjQyNiwwLDE3LjA2Ny03LjY0MSwxNy4wNjctMTcuMDY3UzM1MC43NTksMjA0LjgsMzQxLjMzMywyMDQuOHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNDEuMzMzLDI3My4wNjdoLTIwNC44Yy05LjQyNiwwLTE3LjA2Nyw3LjY0MS0xNy4wNjcsMTcuMDY3czcuNjQxLDE3LjA2NywxNy4wNjcsMTcuMDY3aDIwNC44ICAgIGM5LjQyNiwwLDE3LjA2Ny03LjY0MSwxNy4wNjctMTcuMDY3UzM1MC43NTksMjczLjA2NywzNDEuMzMzLDI3My4wNjd6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzQxLjMzMywzNDEuMzMzaC0yMDQuOGMtOS40MjYsMC0xNy4wNjcsNy42NDEtMTcuMDY3LDE3LjA2N3M3LjY0MSwxNy4wNjcsMTcuMDY3LDE3LjA2N2gyMDQuOCAgICBjOS40MjYsMCwxNy4wNjctNy42NDEsMTcuMDY3LTE3LjA2N1MzNTAuNzU5LDM0MS4zMzMsMzQxLjMzMywzNDEuMzMzeiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+		  </div>
+			  </div>
+		  <div class="col-sm-4" style="background: #A8D8B9">
+			  <div class="col-10 offset-1">
+				<img class="img-fluid" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSItMzEgMCA1MTIgNTEyLjAwMDE5IiB3aWR0aD0iNTEycHgiPjxwYXRoIGQ9Im0xOTQuOTgwNDY5IDMzMGM3NC40Mzc1IDAgMTM1LTYwLjU1ODU5NCAxMzUtMTM1IDAtNzQuNDM3NS02MC41NjI1LTEzNS0xMzUtMTM1LTc0LjQ0MTQwNyAwLTEzNSA2MC41NjI1LTEzNSAxMzUgMCA3NC40NDE0MDYgNjAuNTU4NTkzIDEzNSAxMzUgMTM1em0wLTI0MGM1Ny44OTQ1MzEgMCAxMDUgNDcuMTA1NDY5IDEwNSAxMDUgMCA1Ny44OTg0MzgtNDcuMTA1NDY5IDEwNS0xMDUgMTA1LTU3Ljg5ODQzOCAwLTEwNS00Ny4xMDE1NjItMTA1LTEwNSAwLTU3Ljg5NDUzMSA0Ny4xMDE1NjItMTA1IDEwNS0xMDV6bTAgMCIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Im05MCA0OTYuOTcyNjU2di4wMjczNDRjMCA4LjI4NTE1NiA2LjcxNDg0NCAxNSAxNSAxNWgxNTBjOC4yODUxNTYgMCAxNS02LjcxNDg0NCAxNS0xNSAwLTI0LjgxMjUgMjAuMTg3NS00NSA0NS00NWg2MGM4LjI4NTE1NiAwIDE0Ljk4MDQ2OS02LjcxNDg0NCAxNC45ODA0NjktMTV2LTc3YzAtMjQuODEyNSAyMC4yMDcwMzEtNDUgNDUuMDE5NTMxLTQ1IDUuNTQyOTY5IDAgMTAuNjMyODEyLTMuMDU0Njg4IDEzLjIzODI4MS03Ljk0NTMxMiAyLjYwNTQ2OS00Ljg5MDYyNiAyLjMwMDc4MS0xMC44MjAzMTMtLjc4OTA2Mi0xNS40MjE4NzYtLjUxNTYyNS0uNzY1NjI0LTQ3LjE5NTMxMy03MC4yMTQ4NDMtNTkuNDg0Mzc1LTg4LjU1NDY4Ny4wMDM5MDYtMjAuODA0Njg3LjAwMzkwNi0zMi4xOTkyMTkuMDAzOTA2LTMyLjE5OTIxOSAwLS42NDQ1MzEtLjAzOTA2Mi0xLjI5Mjk2OC0uMTI1LTEuOTMzNTk0LTExLjMzMjAzMS04Ny4yNDYwOTMtODIuODcxMDk0LTE1Ny43NTM5MDYtMTcwLjA5NzY1Ni0xNjcuNjQ4NDM3LTExNy45NDkyMTktMTMuMzc4OTA2LTIxNy43NDYwOTQgNzguNjYwMTU2LTIxNy43NDYwOTQgMTkzLjcwMzEyNSAwIDM4LjQ4ODI4MSAxMS4yMTQ4NDQgNzUuNzQyMTg4IDMyLjQzMzU5NCAxMDcuNzI2NTYyIDM3LjEyMTA5NCA1NS45NjQ4NDQgNTcuNTY2NDA2IDEyNC45NDkyMTkgNTcuNTY2NDA2IDE5NC4yNDYwOTR6bTEyNC4zNjMyODEtNDY1Ljg2NzE4N2M3My4zODY3MTkgOC4zMjQyMTkgMTMzLjY1NjI1IDY3LjQ1MzEyNSAxNDMuNjI1IDE0MC43NjU2MjUgMCAzLjQ1NzAzMSAwIDE1Ljg1NTQ2OC0uMDA3ODEyIDM1Ljc1NzgxMiAwIDIuOTYwOTM4Ljg3NSA1Ljg1OTM3NSAyLjUxOTUzMSA4LjMyNDIxOSAzLjg1NTQ2OSA1Ljc4NTE1NiAzMi4yMzQzNzUgNDguMDQ2ODc1IDQ5LjI3NzM0NCA3My40MTAxNTYtMjQuNDA2MjUgOC43NDIxODgtNDMgMjkuNzkyOTY5LTQ4LjI2OTUzMiA1NS42MzY3MTloLTQuMTAxNTYyYy0yMy4zNTU0NjkgMC00NS4zMDg1OTQtOS4wOTM3NS02MS44MjAzMTItMjUuNjA5Mzc1LTUuODU1NDY5LTUuODU1NDY5LTE1LjM1NTQ2OS01Ljg1NTQ2OS0yMS4yMTQ4NDQgMC01Ljg1NTQ2OSA1Ljg1OTM3NS01Ljg1NTQ2OSAxNS4zNTU0NjkgMCAyMS4yMTQ4NDQgMjIuMTc5Njg3IDIyLjE3OTY4NyA1MS42Njc5NjggMzQuMzk0NTMxIDgzLjAzNTE1NiAzNC4zOTQ1MzFoMi41OTM3NXY0N2gtNDVjLTM2LjIxODc1IDAtNjYuNTIzNDM4IDI1LjgwODU5NC03My40OTYwOTQgNjBoLTEyMS43OTY4NzVjLTIuNzQyMTg3LTcwLjA1MDc4MS0yNC42MDkzNzUtMTM5LjA3ODEyNS02Mi4yNzczNDMtMTk1Ljg1OTM3NS0xNy45NDUzMTMtMjcuMDU0Njg3LTI3LjQyOTY4OC01OC41NzAzMTMtMjcuNDI5Njg4LTkxLjE0MDYyNSAwLTk1LjQzMzU5NCA4Mi40NDkyMTktMTc1LjQ1NzAzMSAxODQuMzYzMjgxLTE2My44OTQ1MzF6bTAgMCIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Im0xNjkuMzc1IDI1MC42MDkzNzVjNS44NTU0NjkgNS44NTU0NjkgMTUuMzU1NDY5IDUuODU1NDY5IDIxLjIxMDkzOCAwbDc1LTc1YzUuODU5Mzc0LTUuODU5Mzc1IDUuODU5Mzc0LTE1LjM1NTQ2OSAwLTIxLjIxNDg0NC01Ljg1NTQ2OS01Ljg1OTM3NS0xNS4zNTU0NjktNS44NTkzNzUtMjEuMjEwOTM4IDBsLTY0LjM5NDUzMSA2NC4zOTQ1MzEtMzQuMzk0NTMxLTM0LjM5NDUzMWMtNS44NTU0NjktNS44NTkzNzUtMTUuMzU1NDY5LTUuODU5Mzc1LTIxLjIxNDg0NCAwLTUuODU1NDY5IDUuODU5Mzc1LTUuODU1NDY5IDE1LjM1NTQ2OSAwIDIxLjIxNDg0NHptMCAwIiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+Cg==" />
+			  </div>
+		  </div>
+		  <div class="col-sm-4" style="background: #A8D8B9">
+			  <div class="col-sm-10 offset-sm-1">
+			  <img class="img-fluid" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNjEyIDYxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjEyIDYxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik01ODcuNTcyLDE4Ni44ODFjLTMyLjI2Ni03NS4yMjUtODcuMDk2LTEyOS45MzQtMTYyLjk0OS0xNjIuMjg1QzM4Ni43MTEsOC40MjcsMzQ2Ljk5MiwwLjE2OCwzMDUuNDk3LDAuMTY4ICAgIGMtNDEuNDg4LDAtODAuOTE0LDguMTgxLTExOC43ODQsMjQuNDI4QzExMS40ODgsNTYuODYxLDU2LjQxNSwxMTEuNTM1LDI0LjA5MiwxODYuODgxQzcuODk1LDIyNC42MjksMCwyNjQuMTc2LDAsMzA1LjY2NCAgICBjMCw0MS40OTYsNy44OTUsODEuMzcxLDI0LjA5MiwxMTkuMTI3YzMyLjMyMyw3NS4zNDYsODcuNDAzLDEzMC4zNDgsMTYyLjYyMSwxNjIuNjIxYzM3Ljg3NywxNi4yNDcsNzcuMjk1LDI0LjQyLDExOC43ODQsMjQuNDIgICAgYzQxLjQ4OSwwLDgxLjIxNC04LjI1OSwxMTkuMTItMjQuNDJjNzUuODUzLTMyLjM1MiwxMzAuNjgzLTg3LjQwMywxNjIuOTU2LTE2Mi42MjFDNjAzLjgxOSwzODYuOTE0LDYxMiwzNDcuMTYsNjEyLDMwNS42NjQgICAgQzYxMiwyNjQuMTc2LDYwMy44MjYsMjI0Ljc1Nyw1ODcuNTcyLDE4Ni44ODF6IE01MzguNzI0LDQ0MC44NTNjLTI0LjAyMSw0MS4xOTUtNTYuOTI5LDczLjg3Ni05OC4zNzUsOTguMDM5ICAgIGMtNDEuMTk1LDI0LjAyMS04Ni4zMzIsMzYuMTM1LTEzNC44NDUsMzYuMTM1Yy0zNi40NywwLTcxLjI3LTcuMDI0LTEwNC40LTIxLjQxNWMtMzMuMTI5LTE0LjM4NC02MS43MzMtMzMuMjk0LTg1LjY2MS01Ny4yMTUgICAgYy0yMy45MjgtMjMuOTI4LTQyLjk3My01Mi44MTEtNTcuMjE0LTg1Ljk5N2MtMTQuMTk5LTMzLjA2NS0yMS4wOC02OC4yNTgtMjEuMDgtMTA0LjczNWMwLTQ4LjUyLDExLjkyMS05My40MjgsMzUuODA3LTEzNC41MDkgICAgYzIzLjk3MS00MS4yMzEsNTYuODg2LTczLjk0Nyw5OC4wMzktOTguMDRjNDEuMTQ2LTI0LjA5Miw4NS45OS0zNi4xNDIsMTM0LjUwMi0zNi4xNDJjNDguNTIsMCw5My42NDksMTIuMTIxLDEzNC44NDUsMzYuMTQyICAgIGM0MS40NDYsMjQuMTY0LDc0LjI4Myw1Ni44NzksOTguMzc1LDk4LjAzOWMyNC4wOTIsNDEuMTUzLDM2LjEzNSw4NS45OSwzNi4xMzUsMTM0LjUwOSAgICBDNTc0Ljg1MiwzNTQuMTg1LDU2Mi44ODgsMzk5LjM5OSw1MzguNzI0LDQ0MC44NTN6IiBmaWxsPSIjMDAwMDAwIi8+CgkJPHBhdGggZD0iTTMyNC45MDYsMzAyLjk4OFYxMjkuNjU5YzAtMTAuMzcyLTkuMDM3LTE4LjczOC0xOS40MS0xOC43MzhjLTkuNzAxLDAtMTguNDAzLDguMzY2LTE4LjQwMywxOC43Mzh2MTc2LjAwNSAgICBjMCwwLjMzNiwwLjY3MSwxLjY3OCwwLjY3MSwyLjY3OGMtMC42NzEsNi4wMjQsMS4wMDcsMTEuMDQzLDUuMDE5LDE1LjA2MmwxMDAuMDUzLDEwMC4wNDZjNi42OTUsNi42OTUsMTkuMDczLDYuNjk1LDI1Ljc2MywwICAgIGM3LjY5NC03LjY5NSw3LjE4OC0xOC44NiwwLTI2LjA5OUwzMjQuOTA2LDMwMi45ODh6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+		  </div>
+		</div>
+	  </div>
+</div>
+<br/>
+</body>
+	
+	
+	
+	
+	
 </html>
---------------------- 
-作者：shangmingchao 
-来源：CSDN 
-原文：https://blog.csdn.net/shangmingchao/article/details/49761315 
-版权声明：本文为博主原创文章，转载请附上博文链接！
