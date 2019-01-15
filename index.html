@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>心理学实验</title>
+<link rel="stylesheet" href="../网站/css/reveal-it.css" type="text/css">
+<!-- 新 Bootstrap4 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="../网站/js/reveal-it.js"></script>	
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body{
+		position: relative;
+	}
+	.bc{
+		background: #1C1C1C
+	}
+	</style>
+</head>
+	
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav id="a" class="navbar navbar-expand-lg fixed-top navbar-dark">
+		<div class="container-fluid">
+           <a class="navbar-brand" href="#">心理学实验</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <!-- 这个 div 加上 justify-content-end 样式即可 -->
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+               <ul class="navbar-nav" id="headerNav">
+                   <li class="nav-item"><a class="nav-link" href="#ll">实验介绍</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#">开始实验</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#">实验结果</a></li>
+               </ul>
+           </div>
+		</div>
+   </nav>
+<script>
+		 function _scroll(){
+            var scrollTop =$(window).scrollTop();
+            if(scrollTop<10){
+                document.getElementById('a').style.background="transparent"
+            }else{ document.getElementById('a').style.background="#1C1C1C"
+            }
+        }
+        $(window).on('scroll',function() {
+            _scroll()
+        });
+	</script>
+<div style="position:relative;">
+  <img class="img-fluid" src="images/ali-yahya-488149-unsplash.jpg">
+  <div style="position: absolute; z-index: 2; left: 873px; top: 264px">
+		<div><p><font color="white" size="+6"><strong>欢迎参加我们的实验</strong></font></p></div>
+		<p><font size="0">&nbsp;</font></p>
+	  <a class="btn btn-dark bc btn-lg" href="#ll"><font color="white">开始实验之旅</font></a>
+	</div>
+</div>
+<div id="ll" style="position:relative;">
+	<img class="img-fluid" src="images/plush-design-studio-483666-unsplash.jpg">
+	<div style="position: absolute; z-index: 2; text-align: center; left: 705px; top: 121px; width: 400px; height: 200px; margin-left: -200px;">
+		<p><font color="black" size="+6"><strong>实验介绍</strong></font></p>		
+		<p><font size="0">&nbsp;</font></p>
+		<button type="button" class="btn btn-light btn-lg"><font color="black">阅读实验介绍</font></button>
+	</div>
+</div>
+</body>
+	
+	
+	
+	
+	
+</html>
