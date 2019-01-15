@@ -21,12 +21,41 @@
 	.bc{
 		background: #1C1C1C
 	}
+		#content-sec3 {
+    position: relative;
+    max-width: 100%;
+    height: auto;    
+    background-size: 100% auto;   
+    text-align: center;
+}
+ 
+
+	@media screen and (max-width:320px){/* 当小于320的时候 */
+              body{font-size:10px;}
+              body a{font-size:10px;}
+  
+         }
+	@media screen and (min-width:320px){/* 当大于1000的时候 */
+             body{font-size:20px;}
+             body a{font-size:20px;}
+ 
+         }
+	@media screen and (min-width:760px){/* 当大于760的时候 */
+            body{font-size:40px;}
+              body a{font-size:40px;}
+          }
+	@media screen and (min-width:1000px){/* 当大于1000的时候 */
+             body{font-size:50px;}
+             body a{font-size:50px;}
+ 
+         }
+
 	</style>
 </head>
 	
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav id="a" class="navbar navbar-expand-lg fixed-top navbar-dark">
-		<div class="container-fluid">
+<nav id="a" class="navbar navbar-expand-lg fixed-top navbar-dark" style="font-size: 10px">
+		<div class="container-fluid" >
            <a class="navbar-brand" href="#">心理学实验</a>
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                <span class="navbar-toggler-icon"></span>
@@ -34,9 +63,9 @@
            <!-- 这个 div 加上 justify-content-end 样式即可 -->
            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                <ul class="navbar-nav" id="headerNav">
-                   <li class="nav-item"><a class="nav-link" href="#ll">实验介绍</a></li>
-                   <li class="nav-item"><a class="nav-link disabled">开始实验</a></li>
-                   <li class="nav-item"><a class="nav-link disabled">实验结果</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#ll" style="font-size: 16px">实验介绍</a></li>
+                   <li class="nav-item"><a class="nav-link disabled" href="#" style="font-size: 16px">开始实验</a></li>
+                   <li class="nav-item"><a class="nav-link disabled" href="#" style="font-size: 16px">实验结果</a></li>
                </ul>
            </div>
 		</div>
@@ -53,26 +82,22 @@
             _scroll()
         });
 	</script>
-<div style="position:relative;">
-  <img class="img-fluid" src="images/ali-yahya-488149-unsplash.jpg">
-  <div style="position: absolute; z-index: 2; left: 873px; top: 264px; width: 499px;">
-		<div><p><font color="white" size="+6"><strong>欢迎参加我们的实验</strong></font></p></div>
-		<p><font size="0">&nbsp;</font></p>
-	  <a class="btn btn-dark bc btn-lg" href="#ll"><font color="white">开始实验之旅</font></a>
-	</div>
-</div>
-<div id="ll" style="position:relative;">
-	<img class="img-fluid" src="images/plush-design-studio-483666-unsplash.jpg">
-	<div style="position: absolute; z-index: 2; text-align: center; left: 705px; top: 121px; width: 400px; height: 200px; margin-left: -200px;">
-		<p><font color="black" size="+6"><strong>实验介绍</strong></font></p>		
-		<p><font size="0">&nbsp;</font></p>
-		<a class="btn btn-light btn-lg" href="实验介绍.html">阅读实验介绍</a>
-	</div>
-</div>
+	<div id="content-sec3">
+            <img class="img-responsive img-fluid" src="images/ali-yahya-488149-unsplash.jpg" >
+            <div id="content-sec3-adjust" style="position: absolute; top:35%; left: 60%; text-align: left">
+                <p class="title"><font color="white"><strong>欢迎参加我们的实验</strong></font></p>
+				<a class="btn btn-dark bc btn-lg" href="#ll""><font color="white">开始实验之旅</font></a>
+            </div>
+        </div>
+	<div id="ll">
+		<div id="content-sec3">
+            <img class="img-responsive img-fluid" src="images/plush-design-studio-483666-unsplash.jpg">
+            <div id="content-sec3-adjust" style="position: absolute; top:19%;left: 50%;width: 400px; height: 200px; margin-left: -200px;">
+                <p class="title"><font color="black"><strong>实验介绍</strong></font></p><br/>
+				<a class="btn btn-light btn-lg" href="实验介绍.html">实验介绍</a>
+            </div>
+			</div>
+        </div>
+	
 </body>
-	
-	
-	
-	
-	
 </html>
