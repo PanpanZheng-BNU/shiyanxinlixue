@@ -4,17 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>心理学实验</title>
-<link rel="stylesheet" href="../网站/css/reveal-it.css" type="text/css">
+<link rel="stylesheet" href="css/reveal-it.css" type="text/css">
 <!-- 新 Bootstrap4 核心 CSS 文件 -->
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-<script src="../网站/js/reveal-it.js"></script>	
+<script src="js/reveal-it.js"></script>	
 <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
 <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
 <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <style type="text/css">
+	.border{
+		border-style:solid;
+		border-width:1px;
+		border-color:#388BFF;
+}
 	body{
 		position: relative;
 	}
@@ -52,7 +57,31 @@
 
 	</style>
 </head>
-	
+				<script>
+				jQuery(function () {
+					var options4 = {
+						id: 'box4'
+						, auto: false
+						, trigger: 'on-visible'
+						,background: '#e9e7ea'
+					};
+					$('.box4').initReveal(options4);
+					var options5 = {
+						id: 'box5'
+						, auto: false
+						, trigger: 'on-visible'
+						,background: '#121013'
+					};
+					$('.box5').initReveal(options5);
+					var options6 = {
+						id: 'box6'
+						, auto: false
+						, trigger: 'on-visible'
+						,background: '#ffffff'
+					};
+					$('.box6').initReveal(options6);
+				});
+	</script>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 <nav id="a" class="navbar navbar-expand-lg fixed-top navbar-dark" style="font-size: 10px">
 		<div class="container-fluid" >
@@ -64,8 +93,8 @@
            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                <ul class="navbar-nav" id="headerNav">
                    <li class="nav-item"><a class="nav-link" href="#syjs" style="font-size: 16px">实验介绍</a></li>
-                   <li class="nav-item"><a class="nav-link disabled" href="#" style="font-size: 16px">开始实验</a></li>
-                   <li class="nav-item"><a class="nav-link disabled" href="#" style="font-size: 16px">实验结果</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#kssy" style="font-size: 16px">开始实验</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#syjg" style="font-size: 16px">实验结果</a></li>
                </ul>
            </div>
 		</div>
@@ -86,19 +115,37 @@
             <img class="img-responsive img-fluid" src="images/ali-yahya-488149-unsplash.jpg" >
             <div id="content-sec3-adjust" style="position: absolute; top:32%; left: 60%; text-align: left">
                 <p class="title"><font color="white"><strong>欢迎参加我们的实验</strong></font></p>
-				<a class="btn btn-dark bc btn-lg" href="#syjs"><font color="white">开始实验之旅</font></a>
+				<a class="btn btn-outline-light btn-lg" href="#syjs"><font color="">开始实验之旅</font></a>
             </div>
         </div>
 	<div id="syjs">
 		<div id="content-sec3">
             <img class="img-responsive img-fluid" src="images/plush-design-studio-483666-unsplash.jpg">
             <div id="content-sec3-adjust" style="position: absolute; top:18%;left: 50%;width: 400px; height: 200px; margin-left: -200px;">
-                <p class="title"><font color="black"><strong>实验介绍</strong></font></p>
-				<a class="btn btn-light btn-lg" href="实验介绍.html">实验介绍</a>
+                <div class="box4"><p class="title"><font color="black"><strong>实验介绍</strong></font></p></div>
+				<div class="box4"><a class="btn btn-outline-dark btn-lg" id="box4" href="实验介绍.html">实验介绍</a></div>
             </div>
 			</div>
         </div>
-	
+	<div id="kssy">
+		<div id="content-sec3">
+			<img class="img-responsive img-fluid" src="images/dominik-lange-389363-unsplash.jpg">
+			<div id="content-sec3-adjust" style="position: absolute; top:34%;left: 23%;">
+				<div class="box5"><p class="title"><font color="white"><strong>开始实验</strong></font></p></div>
+				<div class="box5"><a class="btn btn-outline-light btn-lg disabled" href="实验介绍.html">开始实验</a></div>
+            </div>
+			</div>
+	</div>
+	<div id="syjg">
+		<div id="content-sec3">
+			<div class="row">
+			</div>
+			<img class="img-responsive img-fluid" src="images/evie-shaffer-725935-unspla82sh.jpg">
+			<div id="content-sec3-adjust" style="position: absolute; top:34%;left: 67%;">
+				<div class="box6"><p class="title"><font color="black"><strong>实验结果</strong></font></p></div>
+				<div class="box6"><a class="btn btn-outline-dark btn-lg disabled" href="实验介绍.html">实验结果</a></div>
+            </div>
+			</div>
+	</div>
 </body>
 </html>
-
