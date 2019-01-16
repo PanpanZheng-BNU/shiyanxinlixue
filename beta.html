@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>心理学实验</title>
+<link rel="stylesheet" href="css/reveal-it.css" type="text/css">
+<!-- 新 Bootstrap4 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/reveal-it.js"></script>	
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.border{
+		border-style:solid;
+		border-width:1px;
+		border-color:#388BFF;
+}
+	body{
+		position: relative;
+	}
+	.bc{
+		background: #1C1C1C
+	}
+		#content-sec3 {
+    position: relative;
+    max-width: 100%;
+    height: auto;    
+    background-size: 100% auto;   
+    text-align: center;
+}
+ 
+
+	@media screen and (max-width:320px){/* 当小于320的时候 */
+              body{font-size:10px;}
+              body a{font-size:10px;}
+  
+         }
+	@media screen and (min-width:320px){/* 当大于1000的时候 */
+             body{font-size:20px;}
+             body a{font-size:20px;}
+ 
+         }
+	@media screen and (min-width:760px){/* 当大于760的时候 */
+            body{font-size:40px;}
+              body a{font-size:40px;}
+          }
+	@media screen and (min-width:1000px){/* 当大于1000的时候 */
+             body{font-size:50px;}
+             body a{font-size:50px;}
+ 
+         }
+
+	</style>
+</head>
+	<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Box 1: Reveal Immediately</p>
+            <div class="box1">
+                <h1>Lorem ipsum dolor sit amet, ne mel vero impetus voluptatibus</h1>
+            </div>
+        </div>
+    </div>
+</div>     
+	<script>
+jQuery(function () {
+    //Box 1: reveal immediately - on page load
+    //NOTE: id does refer to an element id, It is used to
+    //      uniquely refer to the element to be revealed.
+    var options1 = {
+        id: 'box1'
+    };
+    $('.box1').initReveal(options1);
+});         
+		</script>
+	
+	
+	</body>
