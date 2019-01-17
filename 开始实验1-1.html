@@ -18,8 +18,27 @@
 	body{
 		position: relative;
 	}
+	.fang1{
+		transition: all 0.3s;
+	}
+	.fang1:hover{
+		transform: scale(1.4);
+	}
+	.fang2{
+		transition: all 0.3s;
+	}
+	.fang2:hover{
+		transform: scale(1.05);
+	}
+
 	.bc{
 		background: #1C1C1C
+	}
+	.fang2{
+		transition: all 0.3s;
+	}
+	.fang2:hover{
+		transform: scale(1.05);
 	}
 	</style>
 </head>
@@ -28,10 +47,12 @@
 //判断checkbox有没有被选中
 		if(document.getElementById("ty").checked==true)
 		{
-			document.getElementById("xyb").disabled="";//给BUTTON按钮的disabled属性赋值
+			document.getElementById("xyb").disabled="";
+			document.getElementById("xyb").classList.add("fang2");
 		}else
 		{
 			document.getElementById("xyb").disabled="disabled";
+			document.getElementById("xyb").classList.remove("fang2")
 		}
 	}
 </script>
@@ -79,7 +100,7 @@
 		<hr style="width="100%" color="#D7C4BB"">
 	<br/>
 	<div style="text-align: center">
-	<input name="check" id="ty" type="checkbox" onclick="check()"/><font>我已用手机填写了以上问卷</font>
+	<input class="fang1" name="check" id="ty" type="checkbox" onclick="check()"/>&nbsp;<font>我已用手机填写了以上问卷</font>
 	<br/><br/>
 	<input type="button" class="btn btn-primary" value="下一步" onclick="javascript:window.location.href='开始实验1-2.html'" id="xyb" disabled="disabled"/>
 	</div>

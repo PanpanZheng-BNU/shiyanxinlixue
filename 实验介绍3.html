@@ -18,6 +18,38 @@
 	body{
 		position: relative;
 	}
+	div img{
+		transition: all 0.3s;
+	}
+	div img:hover{
+		transform: scale(1.2);
+	}
+	.card1{
+		cursor:default;
+		transition: all 0.3s;
+	}
+	.card1:hover{
+		transform: scale(1.1);
+	}
+	.card2{
+		cursor:default;
+		transition: all 0.3s;
+	}
+	.card2:hover{
+		transform: scale(1.05);
+	}
+	.fang1{
+		transition: all 0.3s;
+	}
+	.fang1:hover{
+		transform: scale(1.4);
+	}
+	.fang2{
+				transition: all 0.3s;
+			}
+	.fang2:hover{
+				transform: scale(1.05);
+	}
 	.bc{
 		background: #1C1C1C
 	}
@@ -29,9 +61,11 @@
 		if(document.getElementById("ty").checked==true)
 		{
 			document.getElementById("xyb").disabled="";//给BUTTON按钮的disabled属性赋值
-		}else
+			document.getElementById("xyb").classList.add("fang2");
+	}else
 		{
 			document.getElementById("xyb").disabled="disabled";
+			document.getElementById("xyb").classList.remove("fang2");
 		}
 	}
 </script>
@@ -116,19 +150,19 @@
 	<hr style="width="100%" color="#D7C4BB"">
 	<div class="row">
 		<div class="col">
-	<div class="card text-white" style="background: #F596AA">
+	<div class="card card1 text-white" style="background: #F596AA">
     <div class="card-header"><strong>费用</strong></div>
 	  <div class="card-body">本研究将不会向您收取任何费用。</div>
   </div>
 		</div>
 		<div class="col">
-	<div class="card text-white" style="background: #FB9966">
+	<div class="card card1 text-white" style="background: #FB9966">
 	  <div class="card-header"><strong>潜在危险和副作用</strong></div>
 	  <div class="card-body">本研究不存在任何危险和副作用。</div>
   </div>
 		</div>
 		<div class="col">
-	<div class="card text-white" style="background: #FC9F4D">
+	<div class="card card1 text-white" style="background: #FC9F4D">
     <div class="card-header"><strong>退出自由</strong></div>
 	  <div class="card-body">您可在任何时间退出实验。</div>
   </div>
@@ -137,13 +171,13 @@
 		<br/>
 	<div class="row">
 		<div class="col-7">
-			<div class="card text-white" style="background:#66BAB7">
+			<div class="card card2 text-white" style="background:#66BAB7">
 				<div class="card-header">隐私</div>
 				<div class="card-body">本研究的结果可能会在学术期刊/书籍上发表，或者用于教学。但是您的名字或其他可以确认您的信息将不会在任何发表或教学的材料中出现，除非得到您的允许。另外，本研究过程中取得的任何能够确认您身份的信息，都会在得到您的书面允许后才会使用。</div>
 			</div>
 		</div>
 		<div class="col-5">
-	<div class="card text-white" style="background: #9B90C2">
+	<div class="card card2 text-white" style="background: #9B90C2">
     <div class="card-header">受伤申明</div>
 		<div class="card-body">如果您由于本研究的直接导致的原因受伤，您应当于主要研究者取得联系，并且您将得到必要的治疗。但是，这个治疗并不表明是本机构或主试的过失导致您的受伤。本机构或主试也不将提供其他补偿。</div>
   	</div>
@@ -151,7 +185,7 @@
 	</div>
 	<br/>
 	<div style="text-align: center">
-	<input name="check" id="ty" type="checkbox" onclick="check()"/><font>我已仔细阅读，且同意以上条款</font>
+	<input class="fang1" name="check" id="ty" type="checkbox" onclick="check()"/>&nbsp;<font>我已仔细阅读，且同意以上条款</font>
 	<br/><br/>
 	<input type="button" class="btn btn-primary" value="下一步" onclick="javascript:window.location.href='index3.html#syjg'" id="xyb" disabled="disabled"/>
 	</div>

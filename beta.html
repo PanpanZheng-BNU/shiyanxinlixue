@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-	<script type="text/javascript">
-		onload = function() {
-			setInterval(go, 1000);
-		};
-		var x = 3; //利用了全局变量来执行
-		function go() {
-			x--;
-			if (x > 0) {
-				document.getElementById("sp").innerHTML = x; //每次设置的x的值都不一样了。
-			} else {
-				location.href = 'index3.html#syjg';
-			}
-		}
-	</script>
-	<div style="text-align: center;">
-		<h1>
-		下单成功
-		<span id="sp" style="color: red;">3</span>
-		秒后回首页</h1>
-	</div>
+<pre id="aa"></pre>
+<div style="display:none" id="w">
+    谈及航母的改建工程，当时为了解决现场建设困难，他们做了大量的工作：一是统筹好所有的工作项目，精确安排每人每天的任务，最忙的时候精确到每个小时的具体任务；二是提高所有的施工质量，通过保证质量，在更大程度上节约时间；三是加班加点。
+    “通过这三个方面的手段，才把时间给抢回来。”王治国回忆，“因为我们在北方，那一年遇上了五十年不遇的严寒。前面的很多土建工作，受温度影响很大，耽误了时间。为了抢进度，最后我们把时间抢回来了。”
+</div>
+<script language="javascript">
+    var index=0;
+    var word=document.getElementById("w").innerHTML;
+    function type(){
+        document.getElementById("aa").innerText = word.substring(0,index++);
+    }
+    setInterval(type, 50);
+</script>
 </body>
 </html>
-

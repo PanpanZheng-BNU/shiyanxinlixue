@@ -1,10 +1,144 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>心理学实验</title>
+<link rel="stylesheet" href="../网站/css/reveal-it.css" type="text/css">
+<!-- 新 Bootstrap4 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="../网站/js/reveal-it.js"></script>	
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body{
+		position: relative;
+	}
+	.bc{
+		background: #1C1C1C
+	}
+	#content-sec3 {
+    position: relative;
+    max-width: 100%;
+    height: auto;    
+    background-size: 100% auto;   
+    text-align: center;
+}
+	</style>
 </head>
+<script>
+	function check(){
+//判断checkbox有没有被选中
+		if(document.getElementById("ty").checked==true)
+		{
+			document.getElementById("xyb").disabled="";//给BUTTON按钮的disabled属性赋值
+		}else
+		{
+			document.getElementById("xyb").disabled="disabled";
+		}
+	}
+</script>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav id="a" class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color:transparent">
+		<div class="container-fluid">
+           <a class="navbar-brand" href="index2.html#kssy">心理学实验</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <!-- 这个 div 加上 justify-content-end 样式即可 -->
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+               <ul class="navbar-nav" id="headerNav">
+                   <li class="nav-item"><a class="nav-link" href="实验介绍3.html">实验介绍</a></li>
+                   <li class="nav-item"><a class="nav-link" href="开始实验2.html">开始实验</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#syjg">实验结果</a></li>
+               </ul>
+           </div>
+		</div>
+   </nav>
+<script>
+		 function _scroll(){
+            var scrollTop =$(window).scrollTop();
+            if(scrollTop<10){
+                document.getElementById('a').style.background="transparent"
+            }else{ document.getElementById('a').style.background="white"
+            }
+        }
+        $(window).on('scroll',function() {
+            _scroll()
+        });
+	</script>
 
-<body>
+	<div id="syjg">
+	  <div id="content-sec3">
+            <img class="img-responsive img-fluid" src="../../Downloads/rawpixel-539818-unsplash.jpg">
+        <div id="content-sec3-adjust" style="position: absolute; top:8%;left: 50%;width: 100%; margin-left: -50%;">
+					<h1><strong>实验结果</strong></h1>
+				<div class="container">
+				<div class="row">
+					<div class="col-12" style="text-align: left">
+						<h3 id="aa" style="font-weight: bold"></h3>
+						<hr/>
+						<h5 id="bb" style="text-indent:2em"></h5>
+						<h5 id="cc" style="text-indent:2em"></h5>
+						<h5 id="dd" style="text-indent:2em"></h5>
+						<h5 id="ee" style="text-indent:2em"></h5>
+						<h5 id="ff" style="text-indent:2em"></h5>
+						<h5 id="gg" style="text-indent:2em"></h5>
+						<h5 id="hh" style="text-indent:2em"></h5>
+					  <h6></h6>
+						<br/>
+						<h3 id="ii" style="font-weight: bold"></h3>
+						<hr/>
+						<h5 id="jj" style="text-indent:2em"></h5>
+						<p id="w" style="text-indent:2em; display: none">问卷结果形状与性别在个体认知中存在内隐联结, 即个体潜意识认为圆润的形状与女性更相关, 而有棱角的形状与男性更相关（丁瑛，2019）。这可能是因为，不同形状具有不同的象征意义(Jiang, Gorn, Galli，& Chattopadhyay，2016)，例如圆润的形状和有棱角的形状分别象征着冲突解决方案中的妥协和抗争，而这与性别的社会标准与性别刻板印象紧密相关联。当这一内隐联结运用于消费情境中，就出现了在同等情况下，男性更喜欢买有棱角的商品，女性更喜欢买圆润的商品。本实验的问卷部分就是通过营造自购和他购情境，考察这一内隐联结对于人们实际购买的影响。在他购板块中，让两位不清楚实验目的的研究助理各自对被试的偏爱原因进行编码。编码方式为：(1)提到收礼者性别的理由：(2)与收礼者性别毫无关系的理由。最后先采用Kappa系数衡量编码者的一致性。再采用计数数据的二项分布检验。如果，与假设分布（提到收礼者性别占0%，未提到收礼者性别的占100%）无显著差异，则说明性别与形状的联结是内隐的。实验结果已有研究表明，性别于形状之间存在内隐链接：个体潜意识认为有棱角的形状与男性更相关，圆润的图形与女性更有关。同时红色会增加男性眼中女性的吸引力。我们希望通过实验验证形状—性别内隐联结，并探究颜色与性别之间的内隐联结。实验中使用红色方框、红色圆框、白色方框、白色圆框四种刺激，分别与典型男性、女性名字匹配。通过反应时分析边框形状与颜色对被试性别判断的影响。使用重复测量方差分析的方法对数据进行分析。如果形状—性别联结存在，则男性名字中，带方框的名字比圆框的名字反应时更短，女性名字中则是圆框名字反应时更短。如果颜色—性别联结存在，不同颜色边框下反应时也应表现出显著差异。</p>
+					  <script language="javascript">
+							var index=0;
+							var word=document.getElementById("w").innerHTML;
+							function type(){
+								if(index<=4){
+									document.getElementById("aa").innerText = word.substring(0,index++);
+								}
+								else if(index<=189){
+									document.getElementById("bb").innerHTML = word.substring(4,index++);
+								}
+								else if(index<=283){
+									document.getElementById("cc").innerHTML = word.substring(189,index++);
+								}
+								else if(index<=320){
+									document.getElementById("dd").innerHTML = word.substring(283,index++);
+								}
+								else if(index<=357){
+									document.getElementById("ee").innerHTML = word.substring(320,index++);
+								}
+								else if(index<=394){
+									document.getElementById("ff").innerHTML = word.substring(357,index++);
+								}
+								else if(index<=394){
+									document.getElementById("gg").innerHTML = word.substring(357,index++);
+								}
+								else if(index<=451){
+									document.getElementById("hh").innerHTML = word.substring(394,index++);
+								}
+								else if(index<=455){
+									document.getElementById("ii").innerHTML = word.substring(451,index++);
+								}
+								else{
+									document.getElementById("jj").innerHTML = word.substring(455,index++);
+								}
+							}
+							setInterval(type, 50);
+						</script>
+					</div>
+				</div>
+				</div>
+				
+				
+            </div>
+			</div>
+        </div>
+
 </body>
 </html>
